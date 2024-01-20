@@ -32,7 +32,9 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
     "prepare": "bob build",
-    "release": "release-it"
+    "release": "release-it",
+    "build:tailwind": "tailwindcss --input input.css --output tailwind.css --no-autoprefixer && tailwind-rn",
+    "dev:tailwind": "concurrently \"tailwindcss --input input.css --output tailwind.css --no-autoprefixer --watch\" \"tailwind-rn --watch\""
   },
   "keywords": [
     "react-native",
@@ -61,17 +63,19 @@
     "@types/react": "~17.0.21",
     "@types/react-native": "0.70.0",
     "commitlint": "^17.0.2",
+    "concurrently": "^8.2.2",
     "del-cli": "^5.0.0",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^28.1.1",
+    "postcss": "^8.4.33",
     "prettier": "^2.0.5",
     "react": "18.2.0",
     "react-native": "0.73.2",
     "react-native-builder-bob": "^0.20.0",
     "release-it": "^15.0.0",
-    "tailwindcss": "3.3.2",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.0.2"
   },
   "resolutions": {
@@ -162,6 +166,7 @@
     ]
   },
   "dependencies": {
+    "clsx": "^2.1.0",
     "nativewind": "^2.0.11"
   },
   "directories": {
