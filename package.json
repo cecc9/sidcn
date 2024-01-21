@@ -170,6 +170,7 @@
     "nativewind": "^2.0.11"
   },
   "directories": {
-    "example": "example"
+    "example": "example",
+    "lib": "lib"
   }
 }

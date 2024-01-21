@@ -1,62 +1,43 @@
 import * as React from 'react';
 
-import { StyleSheet, View } from 'react-native';
-import { Button } from 'radiuskit';
-
+import { StyleSheet, Text, View } from 'react-native';
+import { Button, AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogTitle, AlertDialogDescription, AlertDialogClose } from 'radiuskit';
 export default function App() {
-
   return (
     <View style={styles.container}>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+      <View>
+        <AlertDialog>
+          
+          <AlertDialogTrigger>
+            <Button variant="primary">Open Dialog</Button>
+          </AlertDialogTrigger>
+          
+          
+          <AlertDialogContent className='w-10/12'>
 
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-    <View>
-          
-          
-          
-    <Button className='text-[30px] px-10 font-bold
-        
-        '>
-        Press Me
-    </Button>
-          
+            <AlertDialogTitle className="text-[#fff]">Are you absolutely sure?</AlertDialogTitle>
 
+            <AlertDialogDescription className="text-[12px]">
+              This action cannot be undone. This will permanently delete your
+              account and remove your data from our servers.
+            </AlertDialogDescription>
           
+            <AlertDialogClose>
+              <Button variant='secondary' className='px-8'>Close Modal</Button>
+            </AlertDialogClose>
           
-    </View>
-
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+          </AlertDialogContent>
+        </AlertDialog>
+      </View>
           
           
           
@@ -65,26 +46,14 @@ export default function App() {
           
           
           
-
+          
+          
+          
+          
+          
     </View>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 const styles = StyleSheet.create({

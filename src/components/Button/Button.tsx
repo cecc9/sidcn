@@ -110,7 +110,7 @@ const Button = ({ variant, ...props }: ButtonWithTextProps) => {
 
 
     return (
-        <ButtonStyled style={categorizedStyles.View} activeOpacity={0.9}>
+        <ButtonStyled {...props} style={categorizedStyles.View} activeOpacity={0.9} >
             {isText(props.children)
                 &&
                 <TextStyled style={categorizedStyles.Text} >
