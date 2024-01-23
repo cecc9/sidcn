@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="[https://github.com/sidghimire/sidcn/assets/25863990/c1de4916-d4dd-460e-826b-01ea49db4209](https://github.com/sidghimire/sidcn/assets/25863990/f60676cc-36db-45e4-b4fe-843bfa48406c)" alt="Minimalist Black Beige Typography Fashion Business Logo" style="width: 200px; border-radius: 40px;">
+  <img src="https://github.com/sidghimire/sidcn/assets/25863990/c1de4916-d4dd-460e-826b-01ea49db4209](https://github.com/sidghimire/sidcn/assets/25863990/f60676cc-36db-45e4-b4fe-843bfa48406c)" alt="Minimalist Black Beige Typography Fashion Business Logo" style="width: 300px; border-radius: 40px;">
 </div>
 
 
