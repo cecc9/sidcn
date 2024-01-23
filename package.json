@@ -1,6 +1,6 @@
 {
-  "name": "radiuskit",
-  "version": "0.1.0",
+  "name": "sidcn",
+  "version": "1.0.0",
   "description": "React Native UI Package",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -167,7 +167,9 @@
   },
   "dependencies": {
     "clsx": "^2.1.0",
-    "nativewind": "^2.0.11"
+    "fs": "^0.0.1-security",
+    "nativewind": "^2.0.11",
+    "path": "^0.12.7"
   },
   "directories": {
     "example": "example",

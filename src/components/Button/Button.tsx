@@ -1,133 +1,74 @@
 import React from 'react';
-import { TouchableOpacity, Text, type TouchableOpacityProps } from 'react-native';
+import {
+  TouchableOpacity,
+  Text,
+  type TouchableOpacityProps,
+  type ViewStyle,
+  type TextStyle,
+} from 'react-native';
 import { styled } from 'nativewind';
 import { categorizeStyles } from '../../functions/filterArray';
+import {
+  darkTextVariant,
+  darkVariants,
+  textVariant,
+  variants,
+} from './variants';
+import { isText } from '../../functions/global';
+import colorTheme from '../../theme/toggleTheme';
 
 const ButtonStyled = styled(TouchableOpacity);
 const TextStyled = styled(Text);
-function isText(child) {
-    if (React.isValidElement(child)) {
-        return false
-    } else if (typeof child === 'string' || typeof child === 'number') {
-        return true
-    }
-}
+type StyleArray = Array<ViewStyle | TextStyle>;
+type Variant = (typeof variantValues)[number];
 
-const variants = {
-    primary: [
-        { backgroundColor: '#000' },
-        { color: '#fff' },
-        { paddingBottom: 12 },
-        { paddingLeft: 12 },
-        { paddingRight: 12 },
-        { paddingTop: 12 },
-        { borderRadius: 8 },
-    ],
-    secondary: [
-        { backgroundColor: '#f1f1f3' },
-        { color: '#000' },
-        { paddingBottom: 12 },
-        { paddingLeft: 12 },
-        { paddingRight: 12 },
-        { paddingTop: 12 },
-        { borderRadius: 8 },
-    ],
-    destructive: [
-        { backgroundColor: '#d10e1d' },
-        { color: '#fff' },
-        { paddingBottom: 12 },
-        { paddingLeft: 12 },
-        { paddingRight: 12 },
-        { paddingTop: 12 },
-        { borderRadius: 8 },
-    ],
-    outline: [
-        { backgroundColor: '#fff' },
-        { color: '#000' },
-        { borderColor: '#cfcfcf' },
-        { darkBorderColor: '#2f2f2f' },
-        { borderWidth: 1 },
-        { paddingBottom: 12 },
-        { paddingLeft: 12 },
-        { paddingRight: 12 },
-        { paddingTop: 12 },
-        { borderRadius: 8 },
-    ],
-    link: [
-        { paddingTop: 2 },
-        { paddingBottom: 2 },
-        { borderBottomWidth: 1 },
-        { borderBottomColor: '#cfcfcf' },
-        { darkBorderColor: '#2f2f2f' },
-    ],
-};
-
-const textVariant = {
-    primary: [
-        { color: '#fff' },
-        { darkColor: '#000' },
-        { textAlign: 'center' }
-    ],
-    secondary: [
-        { color: '#000' },
-        { darkColor: '#fff' },
-        { textAlign: 'center' }
-    ],
-    destructive: [
-        { color: '#fff' },
-        { darkColor: '#fff' },
-        { textAlign: 'center' }
-    ],
-    outline: [
-        { color: '#000' },
-        { darkColor: '#fff' },
-        { textAlign: 'center' }
-    ],
-    link: [
-        { color: '#000' },
-        { darkColor: '#fff' },
-        { textAlign: 'center' }
-    ],
-};
-
-
+const variantValues = [
+  'primary',
+  'secondary',
+  'destructive',
+  'outline',
+  'link',
+] as const;
 
 interface ButtonWithTextProps extends Omit<TouchableOpacityProps, 'style'> {
-    variant?: keyof typeof variants; // Make variant optional
-    textClass?: string;
-    children?: React.ReactNode;
-    className?: string
+  variant?: Variant; // Make variant optional
+  children?: React.ReactNode;
+  className?: string;
+  style?: StyleArray;
 }
 
 const Button = ({ variant, ...props }: ButtonWithTextProps) => {
-    const variantStyles = variant ? variants[variant] : {};
-    const textVariantStyles = variant ? textVariant[variant] : {};
+  const selectedVariant = variant
+    ? variantValues.includes(variant)
+      ? variant
+      : 'primary'
+    : 'primary';
+  const variantStyles = selectedVariant
+    ? colorTheme()
+      ? variants[selectedVariant]
+      : darkVariants[selectedVariant]
+    : [];
+  const textVariantStyles = selectedVariant
+    ? colorTheme()
+      ? textVariant[selectedVariant]
+      : darkTextVariant[selectedVariant]
+    : [];
+  const stylesArray = props.style ? props.style : [];
+  const mergedStyles = [...variantStyles, ...textVariantStyles, ...stylesArray];
+  const categorizedStyles = categorizeStyles(mergedStyles);
 
-    const stylesArray = props.style ? props.style : [];
-    const mergedStyles = [...variantStyles, ...textVariantStyles, ...stylesArray];
-    const categorizedStyles = categorizeStyles(mergedStyles);
-
-
-
-    return (
-        <ButtonStyled {...props} style={categorizedStyles.View} activeOpacity={0.9} >
-            {isText(props.children)
-                &&
-                <TextStyled style={categorizedStyles.Text} >
-                    {props.children}
-                </TextStyled>
-            }
-            {!isText(props.children)
-                &&
-                props.children
-            }
-        </ButtonStyled>
-    );
+  return (
+    <ButtonStyled {...props} style={categorizedStyles.View} activeOpacity={0.9}>
+      {isText(props.children) && (
+        <TextStyled style={categorizedStyles.Text}>{props.children}</TextStyled>
+      )}
+      {!isText(props.children) && props.children}
+    </ButtonStyled>
+  );
 };
 
-
 Button.defaultProps = {
-    variant: 'primary',
+  variant: 'primary',
 };
 
 export { Button };
