@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { StyleSheet, View } from 'react-native';
 
-import { Button } from 'radiuskit';
+import { Button } from 'sidcn';
 
 import { useColorScheme } from 'nativewind';
 export default function App() {

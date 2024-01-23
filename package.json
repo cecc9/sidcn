@@ -1,6 +1,6 @@
 {
   "name": "sidcn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native UI Package",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -43,14 +43,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sidghimire/radiuskit.git"
+    "url": "git+https://github.com/sidghimire/sidcn.git"
   },
   "author": "sidghimire <siddharthaghimire@gmail.com> (https://github.com/sidghimire)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sidghimire/radiuskit/issues"
+    "url": "https://github.com/sidghimire/sidcn/issues"
   },
-  "homepage": "https://github.com/sidghimire/radiuskit#readme",
+  "homepage": "https://github.com/sidghimire/sidcn#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
