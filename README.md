@@ -5,7 +5,7 @@
 
 # Welcome to sidcn – Your Passport to Mobile Awesomeness! 🚀
 
-### [sidcn.vercel.app](https://sidcn.vercel.app)
+### Documentation: [sidcn.vercel.app](https://sidcn.vercel.app)
 
 Buckle up, fellow developer! 🤠 Get ready to embark on a journey into the world of **sidcn**, the dazzling UI component library that's about to revolutionize your React Native and Expo projects. Say goodbye to the mundane and hello to mobile app greatness!
 
