@@ -14854,42 +14854,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"radiuskit@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "radiuskit@workspace:."
-  dependencies:
-    "@commitlint/config-conventional": ^17.0.2
-    "@evilmartians/lefthook": ^1.5.0
-    "@react-native/eslint-config": ^0.72.2
-    "@release-it/conventional-changelog": ^5.0.0
-    "@types/jest": ^28.1.2
-    "@types/react": ~17.0.21
-    "@types/react-native": 0.70.0
-    clsx: ^2.1.0
-    commitlint: ^17.0.2
-    concurrently: ^8.2.2
-    del-cli: ^5.0.0
-    eslint: ^8.4.1
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-prettier: ^4.0.0
-    fs: ^0.0.1-security
-    jest: ^28.1.1
-    nativewind: ^2.0.11
-    path: ^0.12.7
-    postcss: ^8.4.33
-    prettier: ^2.0.5
-    react: 18.2.0
-    react-native: 0.73.2
-    react-native-builder-bob: ^0.20.0
-    release-it: ^15.0.0
-    tailwindcss: ^3.4.1
-    typescript: ^5.0.2
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  languageName: unknown
-  linkType: soft
-
 "randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -16150,6 +16114,42 @@ __metadata:
   checksum: 7babc46f732a98f4c054ec1f048b55b9149b98aa2da32f6cf9844c434b43c6251efebd6eec120937bd0999e13811ebd45efe17410edb3ca938f82f9381302748
   languageName: node
   linkType: hard
+
+"sidcn@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "sidcn@workspace:."
+  dependencies:
+    "@commitlint/config-conventional": ^17.0.2
+    "@evilmartians/lefthook": ^1.5.0
+    "@react-native/eslint-config": ^0.72.2
+    "@release-it/conventional-changelog": ^5.0.0
+    "@types/jest": ^28.1.2
+    "@types/react": ~17.0.21
+    "@types/react-native": 0.70.0
+    clsx: ^2.1.0
+    commitlint: ^17.0.2
+    concurrently: ^8.2.2
+    del-cli: ^5.0.0
+    eslint: ^8.4.1
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-prettier: ^4.0.0
+    fs: ^0.0.1-security
+    jest: ^28.1.1
+    nativewind: ^2.0.11
+    path: ^0.12.7
+    postcss: ^8.4.33
+    prettier: ^2.0.5
+    react: 18.2.0
+    react-native: 0.73.2
+    react-native-builder-bob: ^0.20.0
+    release-it: ^15.0.0
+    tailwindcss: ^3.4.1
+    typescript: ^5.0.2
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
 
 "side-channel@npm:^1.0.4":
   version: 1.0.4

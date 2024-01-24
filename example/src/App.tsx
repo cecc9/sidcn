@@ -1,49 +1,58 @@
+import { useColorScheme } from 'nativewind';
 import * as React from 'react';
 
-import { StyleSheet, View } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 
-import { Button } from 'sidcn';
+import { Button, Alert, AlertTitle, AlertDescription } from 'sidcn';
 
-import { useColorScheme } from 'nativewind';
 export default function App() {
   const { toggleColorScheme } = useColorScheme();
   return (
-    <View style={styles.container} className="dark:bg-black flex flex-col">
+    <View className="h-full dark:bg-black">
       <Button
-        variant="primary"
-        className="px-8 my-6 text-[14px]"
+        className="my-10 w-1/6 ml-auto mr-10 mt-10 text-[12px]"
         onPress={() => toggleColorScheme()}
       >
-        Primary Button
+        Toggle
       </Button>
-      <Button
-        variant="secondary"
-        className="px-8 my-6 text-[14px]"
-        onPress={() => toggleColorScheme()}
-      >
-        Secondary Button
-      </Button>
-      <Button
-        variant="outline"
-        className="px-8 my-6 text-[14px]"
-        onPress={() => toggleColorScheme()}
-      >
-        Outline Button
-      </Button>
-      <Button
-        variant="destructive"
-        className="px-8 my-6 text-[14px]"
-        onPress={() => toggleColorScheme()}
-      >
-        Destructive Button
-      </Button>
-      <Button
-        variant="link"
-        className="my-6 text-[14px]"
-        onPress={() => toggleColorScheme()}
-      >
-        Link
-      </Button>
+      <View style={styles.container} className="px-4">
+        <Alert variant="primary" className="my-1">
+          <Image
+            source={require('../assets/favicon.png')}
+            className="w-10"
+            style={{ width: 24, height: 24 }}
+          />
+          <AlertTitle>Alert Primary</AlertTitle>
+          <AlertDescription>Alert Description</AlertDescription>
+        </Alert>
+        <Alert variant="secondary" className="my-1">
+          <Image
+            source={require('../assets/favicon.png')}
+            className="w-10"
+            style={{ width: 24, height: 24 }}
+          />
+          <AlertTitle>Alert Secondary</AlertTitle>
+          <AlertDescription>Alert Description</AlertDescription>
+        </Alert>
+        <Alert variant="destructive" className="my-1">
+          <Image
+            source={require('../assets/favicon.png')}
+            className="w-10"
+            style={{ width: 24, height: 24 }}
+          />
+          <AlertTitle>Alert Destructive</AlertTitle>
+          <AlertDescription>Alert Description</AlertDescription>
+        </Alert>
+        <Alert variant="outline" className="my-1">
+          <Image
+            source={require('../assets/favicon.png')}
+            className="w-10"
+            style={{ width: 24, height: 24 }}
+          />
+          <AlertTitle>Alert Outline</AlertTitle>
+          <AlertDescription>Alert Description</AlertDescription>
+        </Alert>
+      </View>
     </View>
   );
 }

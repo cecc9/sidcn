@@ -1,6 +1,6 @@
 //@ts-ignore
-//import { useColorScheme } from '../../example/node_modules/nativewind'; //Development
-import { useColorScheme } from '../../../nativewind';//Production
+import { useColorScheme } from '../../example/node_modules/nativewind'; //Development
+//import { useColorScheme } from '../../../nativewind';//Production
 
 const colorTheme = () => {
   const { colorScheme } = useColorScheme();
