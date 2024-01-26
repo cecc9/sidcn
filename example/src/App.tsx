@@ -1,72 +1,115 @@
+import { View, Text } from 'react-native';
+import React from 'react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+  Button,
+} from 'sidcn';
 import { useColorScheme } from 'nativewind';
-import * as React from 'react';
 
-import { Image, StyleSheet, View } from 'react-native';
-
-import { Button, Alert, AlertTitle, AlertDescription } from 'sidcn';
-
-export default function App() {
-  const { toggleColorScheme } = useColorScheme();
+const App = () => {
+  const { colorScheme, toggleColorScheme } = useColorScheme();
   return (
-    <View className="h-full dark:bg-black">
-      <Button
-        className="my-10 w-1/6 ml-auto mr-10 mt-10 text-[12px]"
-        onPress={() => toggleColorScheme()}
-      >
+    <View className=" flex-1 px-4 dark:bg-black">
+      <Button className="w-20 ml-auto mt-16" onPress={() => toggleColorScheme()}>
         Toggle
       </Button>
-      <View style={styles.container} className="px-4">
-        <Alert variant="primary" className="my-1">
-          <Image
-            source={require('../assets/favicon.png')}
-            className="w-10"
-            style={{ width: 24, height: 24 }}
-          />
-          <AlertTitle>Alert Primary</AlertTitle>
-          <AlertDescription>Alert Description</AlertDescription>
-        </Alert>
-        <Alert variant="secondary" className="my-1">
-          <Image
-            source={require('../assets/favicon.png')}
-            className="w-10"
-            style={{ width: 24, height: 24 }}
-          />
-          <AlertTitle>Alert Secondary</AlertTitle>
-          <AlertDescription>Alert Description</AlertDescription>
-        </Alert>
-        <Alert variant="destructive" className="my-1">
-          <Image
-            source={require('../assets/favicon.png')}
-            className="w-10"
-            style={{ width: 24, height: 24 }}
-          />
-          <AlertTitle>Alert Destructive</AlertTitle>
-          <AlertDescription>Alert Description</AlertDescription>
-        </Alert>
-        <Alert variant="outline" className="my-1">
-          <Image
-            source={require('../assets/favicon.png')}
-            className="w-10"
-            style={{ width: 24, height: 24 }}
-          />
-          <AlertTitle>Alert Outline</AlertTitle>
-          <AlertDescription>Alert Description</AlertDescription>
-        </Alert>
+
+      <View className="justify-center flex-1">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        <Accordion>
+          
+          <AccordionItem>
+            <AccordionTrigger>
+              Open Accordion 1
+            </AccordionTrigger>
+            <AccordionContent>
+              This is accordion detail
+            </AccordionContent>
+          </AccordionItem>
+          
+          <AccordionItem>
+            <AccordionTrigger>
+              Open Accordion 2
+            </AccordionTrigger>
+            <AccordionContent>
+              This is accordion detail
+            </AccordionContent>
+          </AccordionItem>
+          
+          <AccordionItem>
+            <AccordionTrigger>
+              Open Accordion 2
+            </AccordionTrigger>
+            <AccordionContent>
+              This is accordion detail
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
       </View>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});
+export default App;

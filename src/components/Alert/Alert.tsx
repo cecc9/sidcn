@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Text,
-  View,
-  type TextStyle,
-  type ViewProps,
-} from 'react-native';
+import { Text, View, type TextStyle, type ViewProps } from 'react-native';
 import { styled } from 'nativewind';
 import {
   darkDescriptionTextVariant,
@@ -92,20 +87,24 @@ const Alert = ({
       className="flex flex-row"
       style={[variantStyle, props.style]}
     >
-      {allChildren.other.length == 1 && (
+      {allChildren.other && (
         <>
-          <View>{allChildren.other}</View>
-          <View className="flex flex-col ml-4">
-            {React.Children.map(allChildren.title, (child) =>
-              React.cloneElement(child, { variant })
-            )}
-            {React.Children.map(allChildren.description, (child) =>
-              React.cloneElement(child, { variant })
-            )}
-          </View>
+          {allChildren.other.length == 1 && (
+            <>
+              <View>{allChildren.other}</View>
+              <View className="flex flex-col ml-4">
+                {React.Children.map(allChildren.title, (child) =>
+                  React.cloneElement(child, { variant })
+                )}
+                {React.Children.map(allChildren.description, (child) =>
+                  React.cloneElement(child, { variant })
+                )}
+              </View>
+            </>
+          )}
         </>
       )}
-      {allChildren.other.length == 0 && (
+      {!allChildren.other && (
         <>
           <View className="flex flex-col">
             {React.Children.map(allChildren.title, (child) =>
