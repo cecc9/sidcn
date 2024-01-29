@@ -59,7 +59,7 @@ const Badge = ({ variant, ...props }: ButtonWithTextProps) => {
   const categorizedStyles = categorizeStyles(mergedStyles);
 
   return (
-    <ButtonStyled {...props} style={categorizedStyles.View} activeOpacity={0.9}>
+    <ButtonStyled className='w-auto' {...props} style={categorizedStyles.View} activeOpacity={0.9}>
       {isText(props.children) && (
         <TextStyled style={categorizedStyles.Text}>{props.children}</TextStyled>
       )}
