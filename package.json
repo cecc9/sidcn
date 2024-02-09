@@ -1,6 +1,6 @@
 {
   "name": "sidcn",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "React Native UI Package",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
