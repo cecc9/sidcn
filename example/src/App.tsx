@@ -5,6 +5,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
   Button,
+  Input,
 } from 'sidcn';
 import { useColorScheme } from 'nativewind';
 import { ChevronsUpDownIcon } from 'lucide-react-native';
@@ -21,42 +22,7 @@ const App = () => {
       </Button>
 
       <View className="justify-center flex-1">
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-      <Collapsible>
-  <CollapsibleTrigger>Can I use this in my project?</CollapsibleTrigger>
-  <CollapsibleContent>
-    Yes. Free to use for personal and commercial projects. No attribution
-    required.
-  </CollapsibleContent>
-</Collapsible>
-          
-          
-          
-          
-          
-          
-          
-          
-          
+        <Input placeholder="This is a placeholder" />
       </View>
     </View>
   );
