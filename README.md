@@ -9,14 +9,14 @@
 
 
 
-### Components Completed ( 5/54 )
+### Components Completed ( 6/54 )
 - [x] Accordion
 - [x] Alert
 - [ ] Alert Dialog
 - [ ] Aspect Ratio
 - [ ] Avatar
 - [x] Badge
-- [ ] Button
+- [x] Button
 - [ ] Calendar
 - [x] Card
 - [ ] CarouselNew
